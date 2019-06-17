@@ -1,0 +1,63 @@
+bundle install
+bundle exec [--keep-file-descriptors] command
+
+rails new childrens-health-api --api
+rails g model children_treatment name url:string --force
+rails db:migrate
+
+bin/rails g migration CreateChildrenDiseasesChildrenSymptomsJoinTable
+
+when rails db:reset or rake db:reset complains about open connections
+-->
+REVOKE CONNECT ON DATABASE thedb FROM public;
+(and possibly other users/roles; see \l+ in psql)
+
+You can then terminate all connections to this db except your own:
+
+get PIDs from this query 
+
+SELECT pid, pg_terminate_backend(pid) 
+FROM pg_stat_activity 
+WHERE datname = current_database() AND pid <> pg_backend_pid();
+-> now opn psql console and kill -9 <pid>
+
+-> make sure to shut down pg4admin or any other postgres client (this client keeps 1 open connection and hence doesn't let
+reset to work)
+
+now rails db:reset should work!
+
+
+V.Good on db annotations!
+
+https://stackoverflow.com/questions/315792/how-to-avoid-duplicates-in-a-has-many-through-relationship
+
+
+Reverse Proxy ngrok (I have downloaded and unzipped it inside my Applications folder)
+# cd into your local bin directory
+cd /usr/local/bin
+
+# create symlink
+ln -s /Applications/ngrok ngrok
+
+added this optional token so that my tunnel can run for longer
+ngrok authtoken 6ZF1nV1nPkc6QZPoBNkHy_5ze1F9ezCP9YCNV2yb6RS
+
+finally listen to port on 5000
+ngrok http 5000
+
+
+
+---------
+
+
+rails g migration AddColumnsToDisease url:string img:string
+rake db:migrate
+
+rails db:seed
+
+
+truncate table diseases;;
+truncate table diseases_symptoms;;
+truncate table diseases_treatments;;
+truncate table symptoms;;
+truncate table treatments
