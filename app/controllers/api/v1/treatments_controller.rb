@@ -7,8 +7,8 @@ module Api
                 _nlp = params['nlp']
                 _memory = _conversation['memory']
 
-                _disease = _memory["disease"].upcase
-                _age = _memory["age"].to_i
+                _disease = _memory["disease"]["disease"].upcase
+                _age = _memory["age"]["age"].to_i
 
                 _disease_record = Disease.where('UPPER(diseases.name) = (?)', _disease)
 
@@ -71,8 +71,7 @@ module Api
                     }
                     _buttons.push _str
                 end
-
-
+                
                 _replies = [
                     {
                         type: 'card',
