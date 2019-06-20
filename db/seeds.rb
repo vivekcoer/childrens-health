@@ -75,104 +75,96 @@ fd = Disease.where({
 
 fluids= Treatment.where({
      name: "Fluids and Rest",
-     url: ""
+     url: "https://www.nutritionnews.abbott/content/dam/an/newsroom/images/wire_article_img/cheerfullittlegirlrecove_621805.jpg"
 }).first_or_create
 
 breast_milk = Treatment.where({
     name: "Breast Milk or Baby Formula",
-    url: ""
+    url: "https://images.agoramedia.com/wte3.0/gcms/things-to-Know-About-Choosing-Both-Breastfeeding-and-Formula-for-Your-Baby-722x406.jpg?width=574"
 }).first_or_create
 
 congestion_treatment = Treatment.where({
     name: "Treat Congestion and Symptoms",
-    url: ""
+    url: "https://www.todaysparent.com/wp-content/uploads/2016/01/Kid-blowing-nose-2-660x660.jpg"
 }).first_or_create
 
 humidifier = Treatment.where({
     name: "Use humidifier",
-    url: ""
+    url: "https://cdn.shopify.com/s/files/1/0572/7161/products/51bOE3MotoL._SX522_1024x1024.jpg?v=1511903870"
 }).first_or_create
 
 prevent_flu = Treatment.where({
     name: "Prevent Flu",
-    url: ""
+    url: "https://www.nationaljewish.org/NJH/media/img/stock/Infographic_Flu-Prevention-Tips.jpg"
 }).first_or_create
 
 wait_5_6 = Treatment.where({
     name: "Wait for 5-6 days",
-    url: ""
+    url: "https://ichef.bbci.co.uk/childrens-responsive-ichef-live/r/880/1x/cbeebies/Helping_to_wait_christmas.jpg"
 }).first_or_create
 
 wait_1_2 = Treatment.where({
     name: "Wait for 1-2 days",
-    url: ""
+    url: "https://ichef.bbci.co.uk/childrens-responsive-ichef-live/r/880/1x/cbeebies/Helping_to_wait_christmas.jpg"
 }).first_or_create
 
 wait_4_5 = Treatment.where({
     name: "Wait for 4-5 days",
-    url: ""
+    url: "https://ichef.bbci.co.uk/childrens-responsive-ichef-live/r/880/1x/cbeebies/Helping_to_wait_christmas.jpg"
 }).first_or_create
 
 wait_7_8 = Treatment.where({
     name: "Wait for 7-8 days",
-    url: ""
+    url: "https://ichef.bbci.co.uk/childrens-responsive-ichef-live/r/880/1x/cbeebies/Helping_to_wait_christmas.jpg"
 }).first_or_create
 
 over_the_counter = Treatment.where({
     name: "Over-the-counter pain relievers like ibuprofen (Advil) or acetaminophen (Tylenol)",
-    url: ""
+    url: "https://www.thefix.com/sites/default/files/styles/article/public/pharmacy.jpg"
 }).first_or_create
 
 antibodies = Treatment.where({
-    name: "Antibodies",
+    name: "https://familydoctor.org/wp-content/uploads/2001/03/56858611_l-705x470.jpg",
     url: ""
 }).first_or_create
 
 vaccination = Treatment.where({
     name: "Vaccination",
-    url: ""
+    url: "https://marketing-assets.avvo.com/uploads/sites/3/2017/04/vaccination-1024x626.jpg"
 }).first_or_create
 
 feeding_routine = Treatment.where({
     name: "Change Feeding routine",
-    url: ""
+    url: "https://amotherfarfromhome.com/wp-content/uploads/2015/02/printable-newborn-routine-with-background.jpg"
 }).first_or_create
 
 cimetidine = Treatment.where({
     name: "Cimetidine",
-    url: ""
+    url: "https://target.scene7.com/is/image/Target/GUEST_8d67e633-bada-426b-98a0-f9549dcef9a5?wid=488&hei=488&fmt=webp"
 }).first_or_create
 
 famotidine = Treatment.where({
     name: "Famotidine",
-    url: ""
+    url: "https://target.scene7.com/is/image/Target/GUEST_99eb2c9d-3fce-498b-94f9-16d0ceea36dc?fmt=webp&qlt=80&wid=1400"
 }).first_or_create
 
 trimethoprim = Treatment.where({
     name: "Trimethoprim/Sulfamethoxazole",
-    url: ""
+    url: "https://www.sigmapharmaceuticals.com/835-large_default/polymyxinb-trimethoprim-solution.jpg"
 }).first_or_create
 
 antihistamine = Treatment.where({
     name: "Antihistamine",
-    url: ""
+    url: "https://target.scene7.com/is/image/Target/GUEST_7e2d07ea-2c24-4803-b933-f22bc632f3b3?wid=488&hei=488&fmt=webp"
 }).first_or_create
 
 anti_inflammatory = Treatment.where({
     name: "Anti-inflammatory pain relievers such as Ibuprofen",
-    url: ""
+    url: "https://target.scene7.com/is/image/Target/GUEST_96889543-7c49-4761-8c5b-c8debbc0d619?wid=488&hei=488&fmt=webp"
 }).first_or_create
 
 
 #Let's put some symptoms for the common diseases (many to many relationship is possible)
-
-# cold = Symptom.where({
-#     name: "Cold"
-# }).first_or_create
-
-# common_cold = Symptom.where({
-#     name: "Common Cold"
-# }).first_or_create
 
 cold = Symptom.where({
     name: "Cold"
